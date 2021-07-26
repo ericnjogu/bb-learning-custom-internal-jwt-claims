@@ -4,10 +4,12 @@ import com.backbase.identity.tokenconverter.enhancer.InternalTokenEnhancer;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.oauth2.common.OAuth2AccessToken;
 import org.springframework.security.oauth2.provider.OAuth2Authentication;
+import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.Map;
 
+@Component
 public class CustomTokenEnhancer implements InternalTokenEnhancer {
   @Value("communication.transferwise.api-key")
   private String transferwiseApiKey;
