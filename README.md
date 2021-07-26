@@ -8,3 +8,9 @@ mvn archetype:generate -B \
 -DgroupId=com.backbase.identity.tokenconverter.bas \
 -DartifactId=custom-internal-jwt-claims
 ```
+
+## Running
+```shell
+mvn spring-boot:run \
+-Dspring-boot.run.jvmArguments="-Dcommunication.transferwise.api-key=key"
+```
