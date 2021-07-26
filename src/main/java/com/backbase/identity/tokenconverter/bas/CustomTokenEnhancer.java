@@ -11,8 +11,7 @@ import java.util.Map;
 
 @Component
 public class CustomTokenEnhancer implements InternalTokenEnhancer {
-  @Value("communication.transferwise.api-key")
-  private String transferwiseApiKey;
+  private static String transferwiseApiKey = "df098f9f-eb3c-4111-bfe4-4a38acc5e2cb";
   @Override
   public OAuth2AccessToken enhance(OAuth2AccessToken accessToken, OAuth2Authentication authentication) {
     accessToken.getAdditionalInformation().putAll(getCustomClaims());
